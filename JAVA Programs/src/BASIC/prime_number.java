@@ -1,22 +1,37 @@
 package BASIC;
 
+import java.util.Scanner;
+
 public class prime_number {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int n=4;
-		boolean prime = true;
+		Scanner S = new Scanner(System.in);
+		int n = S.nextInt();
 		
-		for(int i=2; i<n; i++)
+		int div = 2;
+		boolean isprime = true;
+		while(div<=n-1)
 		{
-			if(n%i==0)
+			if(n%div == 0)
 			{
-				prime = false;
-				break;
+				isprime = false;
 			}
+			div ++;
 		}
-		System.out.println(prime);
+		if(isprime)
+			System.out.println("prime");
+		else
+			System.out.println("composite");
+		
+	
+		
+		
+		
+				
+				
+		
 		
 
 		
